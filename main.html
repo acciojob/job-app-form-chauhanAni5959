@@ -2,35 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Application Form</title>
 </head>
 <body>
-  <h1>Job Application Form</h1>
-  
-  <form method="post">
-    
+  <h2>Job Application Form</h2>
+  <form action="#" method="post">
     <!-- Name -->
     <label for="name">Name*:</label>
-    <input type="text" id="name" name="name" required>
-    <br><br>
-    
+    <input type="text" id="name" name="name" required><br><br>
+
     <!-- Email -->
     <label for="email">Email*:</label>
-    <input type="email" id="email" name="email" required>
-    <br><br>
-    
+    <input type="email" id="email" name="email" required><br><br>
+
     <!-- Gender -->
     <label>Gender*:</label>
-    <input type="radio" id="male" name="gender" value="Male" required>
+    <input type="radio" id="male" name="gender" value="male" required>
     <label for="male">Male</label>
-    
-    <input type="radio" id="female" name="gender" value="Female" required>
+    <input type="radio" id="female" name="gender" value="female">
     <label for="female">Female</label>
-    
-    <input type="radio" id="other" name="gender" value="Other" required>
+    <input type="radio" id="other" name="gender" value="other">
     <label for="other">Other</label>
     <br><br>
-    
+
     <!-- Laptop Brands -->
     <label for="laptop">Laptop Brands:</label>
     <select id="laptop" name="laptop">
@@ -39,30 +34,25 @@
       <option value="hp">HP</option>
     </select>
     <br><br>
-    
+
     <!-- Age -->
     <label for="age">Age*:</label>
-    <input type="number" id="age" name="age" required>
-    <br><br>
-    
+    <input type="number" id="age" name="age" required><br><br>
+
     <!-- Date of Birth -->
     <label for="dob">Date of Birth*:</label>
-    <input type="date" id="dob" name="dob" required>
-    <br><br>
-    
+    <input type="date" id="dob" name="dob" required><br><br>
+
     <!-- Password -->
     <label for="password">Password*:</label>
-    <input type="password" id="password" name="password" required>
-    <br><br>
-    
+    <input type="password" id="password" name="password" required><br><br>
+
     <!-- Portfolio -->
     <label for="portfolio">Portfolio URL:</label>
-    <input type="url" id="portfolio" name="portfolio">
-    <br><br>
-    
+    <input type="url" id="portfolio" name="portfolio"><br><br>
+
     <!-- Submit -->
     <button type="submit">Submit</button>
-    
   </form>
 </body>
 </html>
