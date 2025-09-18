@@ -6,52 +6,43 @@
   <title>Job Application Form</title>
 </head>
 <body>
-  <h2>Job Application Form</h2>
-  <form method="post">
-    <!-- Name -->
-    <label for="name">Name*:</label>
-    <input type="text" id="name" name="name" required>
-    <br><br>
-    <!-- Email -->
-    <label for="email">Email*:</label>
-    <input type="email" id="email" name="email" required>
-    <br><br>
-    <!-- Gender -->
-    <label>Gender*:</label>
-    <input type="radio" id="male" name="gender" value="male" required>
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="female" required>
-    <label for="female">Female</label>
-    <input type="radio" id="other" name="gender" value="other" required>
-    <label for="other">Other</label>
-    <br><br>
-    <!-- Laptop Brands -->
-    <label for="laptop">Preferred Laptop Brand:</label>
-    <select id="laptop" name="laptop">
-      <option value="apple">Apple</option>
-      <option value="asus">Asus</option>
-      <option value="hp">HP</option>
-    </select>
-    <br><br>
-    <!-- Age -->
-    <label for="age">Age*:</label>
-    <input type="number" id="age" name="age" required>
-    <br><br>
-    <!-- Date of Birth -->
-    <label for="dob">Date of Birth*:</label>
-    <input type="date" id="dob" name="dob" required>
-    <br><br>
-    <!-- Password -->
-    <label for="password">Password*:</label>
-    <input type="password" id="password" name="password" required>
-    <br><br>
-    <!-- Portfolio URL -->
-    <label for="portfolio">Portfolio URL:</label>
-    <input type="url" id="portfolio" name="portfolio">
-    <br><br>
-    <!-- Submit Button -->
-    <button type="submit">Submit</button>
-  </form>
+  <form method="POST" action="#">
+  <label for="name">Name *</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Email *</label>
+  <input type="email" id="email" name="email" required />
+
+  <span>Gender *</span>
+  <input type="radio" id="gender-male" name="gender" value="male" required />
+  <label for="gender-male">Male</label>
+  <input type="radio" id="gender-female" name="gender" value="female" required />
+  <label for="gender-female">Female</label>
+  <input type="radio" id="gender-other" name="gender" value="other" required />
+  <label for="gender-other">Other</label>
+
+  <label for="laptop">Laptop Brands</label>
+  <select id="laptop" name="laptop">
+    <option value="apple">Apple</option>
+    <option value="asus">Asus</option>
+    <option value="hp">HP</option>
+  </select>
+
+  <label for="age">Age *</label>
+  <input type="number" id="age" name="age" required />
+
+  <label for="dob">Date of Birth *</label>
+  <input type="date" id="dob" name="dob" required />
+
+  <label for="password">Password *</label>
+  <input type="password" id="password" name="password" required />
+
+  <label for="portfolio">Portfolio URL</label>
+  <input type="url" id="portfolio" name="portfolio" />
+
+  <button type="submit">Submit</button>
+</form>
+
   <!-- Link to script.js -->
   <script src="script.js"></script>
 </body>
