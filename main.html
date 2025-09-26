@@ -6,6 +6,74 @@
   <title>Job Application Form</title>
 </head>
 <body>
+	<style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    form div {
+      margin-bottom: 15px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="password"],
+    input[type="url"],
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    input[type="radio"] {
+      margin-right: 6px;
+    }
+    .radio-group label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+    .checkbox-group label {
+      font-weight: normal;
+      display: inline-block;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .invalid-feedback {
+      color: #d9534f;
+      font-size: 0.9em;
+      display: none;
+      margin-top: 3px;
+    }
+  </style>
   <form method="POST" action="#">
     <div>
       <label for="name">Name*</label>
@@ -62,6 +130,47 @@
       <button type="submit">Submit</button>
     </div>
   </form>
+	<script>
+    const form = document.getElementById('jobApplicationForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Reset invalid feedback
+      form.querySelectorAll('.invalid-feedback').forEach(div => div.style.display = 'none');
+
+      let valid = true;
+
+      // Validate standard required fields
+      ['name', 'email', 'age', 'dob', 'password'].forEach(id => {
+        const input = form.querySelector('#' + id);
+        if (!input.value.trim()) {
+          form.querySelector(`#${id} ~ .invalid-feedback`).style.display = 'block';
+          valid = false;
+        }
+      });
+
+      // Validate gender radio buttons
+      const genderChecked = form.querySelector('input[name="gender"]:checked');
+      if (!genderChecked) {
+        form.querySelector('#genderError').style.display = 'block';
+        valid = false;
+      }
+
+      // Validate checkbox
+      const checkbox = form.querySelector('#conditions-checkbox');
+      if (!checkbox.checked) {
+        form.querySelector('#checkboxError').style.display = 'block';
+        valid = false;
+      }
+
+      // If all valid submit the form (or do other submission logic)
+      if (valid) {
+        alert('Form successfully submitted!');
+        form.reset();
+      }
+    });
+  </script>
 
   <!-- Link to script.js -->
   <script src="script.js"></script>
