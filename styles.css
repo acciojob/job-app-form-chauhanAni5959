@@ -51,13 +51,3 @@ button {
 button:hover {
   background-color: #3573c9;
 }
-
-/* Validation Styles */
-
-input:invalid, select:invalid {
-  border-color: red;
-}
-
-input:valid, select:valid {
-  border-color: green;
-}
