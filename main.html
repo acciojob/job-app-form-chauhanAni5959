@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Job Application Form</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form method="POST" action="#" novalidate id="job-application-form">
-    <div>
-      <label for="name">Name *</label>
-      <input type="text" id="name" name="name" required />
-    </div>
-    <div>
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required />
-    </div>
-    <fieldset>
-      <legend>Gender *</legend>
-      <div>
-        <input type="radio" id="gender-male" name="gender" value="male" required />
-        <label for="gender-male">Male</label>
-      </div>
-      <div>
-        <input type="radio" id="gender-female" name="gender" value="female" />
-        <label for="gender-female">Female</label>
-      </div>
-      <div>
-        <input type="radio" id="gender-other" name="gender" value="other" />
-        <label for="gender-other">Other</label>
-      </div>
-    </fieldset>
-    <div>
-      <label for="laptop">Laptop Brands</label>
-      <select id="laptop" name="laptop">
-        <option value="apple">Apple</option>
-        <option value="asus">Asus</option>
-        <option value="hp">HP</option>
-      </select>
-    </div>
-    <div>
-      <label for="age">Age *</label>
-      <input type="number" id="age" name="age" required />
-    </div>
-    <div>
-      <label for="dob">Date of Birth *</label>
-      <input type="date" id="dob" name="dob" required />
-    </div>
-    <div>
-      <label for="password">Password *</label>
-      <input type="password" id="password" name="password" required />
-    </div>
-    <div>
-      <label for="portfolio">Portfolio URL</label>
-      <input type="url" id="portfolio" name="portfolio" />
-    </div>
-    <div>
-      <button type="submit">Submit</button>
-    </div>
-  </form>
 
-<script src="validation.js"></script>
+  <div class="container">
+    <h1>Job Application Form</h1>
+
+    <form id="jobForm" method="post">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender *</label>
+        <div class="radio-group">
+          <label for="male"><input type="radio" id="male" name="gender" value="Male" required> Male</label>
+          <label for="female"><input type="radio" id="female" name="gender" value="Female"> Female</label>
+          <label for="other"><input type="radio" id="other" name="gender" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="laptop">Laptop Brand</label>
+        <select id="laptop" name="laptop">
+          <option value="Apple">Apple</option>
+          <option value="Asus">Asus</option>
+          <option value="HP">HP</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age *</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="portfolio">Portfolio URL</label>
+        <input type="url" id="portfolio" name="portfolio">
+      </div>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

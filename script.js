@@ -1,7 +1,17 @@
-// Basic client-side validation for the form
-document.getElementById('job-application-form').addEventListener('submit', function(event) {
-  if (!this.checkValidity()) {
-    event.preventDefault(); // Prevent submission if invalid
-    alert('Please fill out all required fields correctly.');
+document.getElementById('jobForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const age = document.getElementById('age').value;
+  const dob = document.getElementById('dob').value;
+  const password = document.getElementById('password').value;
+
+  if (!name || !email || !age || !dob || !password) {
+    alert('Please fill all required fields.');
+    return;
   }
+
+  alert('Form submitted successfully!');
+  this.reset();
 });
